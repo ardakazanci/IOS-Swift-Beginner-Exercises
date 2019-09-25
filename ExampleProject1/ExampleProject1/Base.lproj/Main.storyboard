@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ExampleProject1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample_image_2" translatesAutoresizingMaskIntoConstraints="NO" id="HD0-YZ-olD">
+                                <rect key="frame" x="20" y="87" width="374" height="243"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oOH-mj-pzY">
+                                <rect key="frame" x="20" y="387" width="374" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="eK4-UN-iGF"/>
+                                </constraints>
+                                <state key="normal" title="Change"/>
+                                <connections>
+                                    <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XBl-5C-UsQ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SouthPark App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fkw-Yh-17k">
+                                <rect key="frame" x="20" y="485" width="374" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="mv7-4P-k21"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="HD0-YZ-olD" firstAttribute="trailing" secondItem="oOH-mj-pzY" secondAttribute="trailing" id="20C-V4-Yvj"/>
+                            <constraint firstItem="HD0-YZ-olD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="4Go-dp-0cj"/>
+                            <constraint firstItem="oOH-mj-pzY" firstAttribute="top" secondItem="HD0-YZ-olD" secondAttribute="bottom" constant="57" id="OCu-4G-x4w"/>
+                            <constraint firstItem="HD0-YZ-olD" firstAttribute="leading" secondItem="oOH-mj-pzY" secondAttribute="leading" id="a91-MY-kVI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Fkw-Yh-17k" secondAttribute="bottom" constant="317" id="b7s-MQ-g7e"/>
+                            <constraint firstItem="oOH-mj-pzY" firstAttribute="leading" secondItem="Fkw-Yh-17k" secondAttribute="leading" id="dGb-LV-coy"/>
+                            <constraint firstItem="HD0-YZ-olD" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="elo-dh-woL"/>
+                            <constraint firstItem="Fkw-Yh-17k" firstAttribute="top" secondItem="oOH-mj-pzY" secondAttribute="bottom" constant="42" id="gKJ-O7-Vnw"/>
+                            <constraint firstItem="oOH-mj-pzY" firstAttribute="trailing" secondItem="Fkw-Yh-17k" secondAttribute="trailing" id="ibg-rw-YbD"/>
+                            <constraint firstItem="HD0-YZ-olD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="43" id="lUq-Ce-mWY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="HD0-YZ-olD" id="EK0-GN-tk3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-57.971014492753625" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="sample_image_2" width="620" height="420"/>
+    </resources>
+</document>
