@@ -61,11 +61,11 @@
 				A5B764072341116B00918B4C /* AppDelegate.swift */,
 				A5B764092341116B00918B4C /* SceneDelegate.swift */,
 				A5B7640B2341116B00918B4C /* ViewController.swift */,
+				A5B7641B2341130700918B4C /* ViewControllerScreen2.swift */,
 				A5B7640D2341116B00918B4C /* Main.storyboard */,
 				A5B764102341116F00918B4C /* Assets.xcassets */,
 				A5B764122341116F00918B4C /* LaunchScreen.storyboard */,
 				A5B764152341116F00918B4C /* Info.plist */,
-				A5B7641B2341130700918B4C /* ViewControllerScreen2.swift */,
 			);
 			path = BirdenFazlaEkranIleCalismak;
 			sourceTree = "<group>";

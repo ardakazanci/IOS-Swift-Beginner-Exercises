@@ -26,9 +26,16 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Ekran 2 ye Geçiş"/>
                                 <connections>
-                                    <segue destination="Kv1-FD-Nru" kind="show" id="Xgy-YE-iMZ"/>
+                                    <action selector="oneToSecond:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GDY-yY-Tuc"/>
+                                    <segue destination="Kv1-FD-Nru" kind="show" identifier="toSecondSegue" id="Xgy-YE-iMZ"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GcA-Ou-Xj7">
+                                <rect key="frame" x="20" y="173" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -38,6 +45,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="VEU-Vb-RJH"/>
+                    <connections>
+                        <outlet property="tf" destination="GcA-Ou-Xj7" id="Efp-Gj-yWf"/>
+                        <segue destination="Kv1-FD-Nru" kind="show" identifier="toSecondManuelSegue" id="27W-Ui-Pef"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -57,6 +68,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Screen 2 Values" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TwU-VJ-yZT">
+                                <rect key="frame" x="146" y="186" width="123" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -66,6 +84,9 @@
                         <viewLayoutGuide key="safeArea" id="UXG-5I-nF0"/>
                     </view>
                     <navigationItem key="navigationItem" id="OW6-Tt-ORG"/>
+                    <connections>
+                        <outlet property="tf2" destination="TwU-VJ-yZT" id="nQ1-Ri-bjO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cLz-le-hiK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -90,4 +111,7 @@
             <point key="canvasLocation" x="-57.971014492753625" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="27W-Ui-Pef"/>
+    </inferredMetricsTieBreakers>
 </document>

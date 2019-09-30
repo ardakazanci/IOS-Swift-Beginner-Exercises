@@ -10,21 +10,16 @@ import UIKit
 
 class ViewControllerScreen2: UIViewController {
 
+    @IBOutlet weak var tf2: UILabel!
+    var resultValue = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        tf2.text = resultValue
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
+   
 
 }
