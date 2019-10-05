@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GestureRecognizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jame.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="s3P-7f-mXp">
+                                <rect key="frame" x="20" y="178" width="374" height="265"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fotoğraf 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cb-ul-5uC">
+                                <rect key="frame" x="20" y="488" width="374" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="Bne-EG-f49"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="s3P-7f-mXp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="134" id="5wB-6t-mdm"/>
+                            <constraint firstItem="6cb-ul-5uC" firstAttribute="top" secondItem="s3P-7f-mXp" secondAttribute="bottom" constant="45" id="Hy2-qj-EBQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6cb-ul-5uC" secondAttribute="bottom" constant="356" id="Uk2-rb-HkD"/>
+                            <constraint firstItem="s3P-7f-mXp" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="XnZ-fb-gd6"/>
+                            <constraint firstItem="s3P-7f-mXp" firstAttribute="leading" secondItem="6cb-ul-5uC" secondAttribute="leading" id="ZwD-i7-RSm"/>
+                            <constraint firstItem="s3P-7f-mXp" firstAttribute="trailing" secondItem="6cb-ul-5uC" secondAttribute="trailing" id="gUI-uv-FrT"/>
+                            <constraint firstItem="s3P-7f-mXp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="s5D-Iv-Xh2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imv_photo1" destination="s3P-7f-mXp" id="sHL-2o-wDF"/>
+                        <outlet property="lbl_name1" destination="6cb-ul-5uC" id="c2W-FF-YcJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="jame.jpg" width="780" height="520"/>
+    </resources>
+</document>
