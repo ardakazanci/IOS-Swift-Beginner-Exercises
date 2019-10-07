@@ -88,6 +88,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hc0-Za-F1N">
                                 <rect key="frame" x="156" y="770" width="34" height="30"/>
                                 <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="btn_start:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gm0-fi-5Kx"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X7e-X1-4xI">
                                 <rect key="frame" x="220" y="770" width="39" height="30"/>
@@ -156,6 +159,23 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="img_1" destination="XbQ-X8-QzS" id="8Lf-G3-QSb"/>
+                        <outlet property="img_10" destination="s6o-7T-bKs" id="eib-P2-x1C"/>
+                        <outlet property="img_11" destination="0si-zZ-ked" id="hbU-G6-EAK"/>
+                        <outlet property="img_12" destination="4Jb-fy-fkm" id="jsm-Kw-719"/>
+                        <outlet property="img_2" destination="zg5-cO-e40" id="I4S-wf-gOn"/>
+                        <outlet property="img_3" destination="2hZ-Hf-zyU" id="Wyx-ea-HuN"/>
+                        <outlet property="img_4" destination="uYB-hZ-mTE" id="LRM-9i-MHM"/>
+                        <outlet property="img_5" destination="RKt-Fg-fia" id="qGO-Ha-Ee4"/>
+                        <outlet property="img_6" destination="048-Du-msd" id="ydU-xI-KYV"/>
+                        <outlet property="img_7" destination="G6z-oB-KyO" id="x9T-C6-Cdc"/>
+                        <outlet property="img_8" destination="dh4-fd-vNl" id="f0A-PZ-bbQ"/>
+                        <outlet property="img_9" destination="4pd-hD-xw2" id="Tka-ug-uXb"/>
+                        <outlet property="lb_message" destination="uLz-TV-G3T" id="ixY-0E-24W"/>
+                        <outlet property="lb_point" destination="yAt-Sl-lNX" id="YJG-Tt-PBf"/>
+                        <outlet property="lb_time" destination="Pfc-3e-aQz" id="5yh-v9-dxb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
