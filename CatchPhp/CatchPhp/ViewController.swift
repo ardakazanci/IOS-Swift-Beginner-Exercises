@@ -31,7 +31,8 @@ class ViewController: UIViewController {
     
     
     var imageList: [UIImageView] = []
-    
+    var imageIndexControlFirst:Int = 0
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -59,14 +60,37 @@ class ViewController: UIViewController {
         
         _ = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(randomImageVisible), userInfo: nil, repeats: true)
         
+      
+        
+        
     }
     
     @objc func randomImageVisible(){
+            
+        let imageIndex = Int.random(in: 0..<12) // 0
+        imageIndexControlFirst = imageIndex // 0
+        // döngüye alıp gelen index dışında kileri gizleyeceğiz.
+        // eğer gelen index değeri, dizide bulunan index e eşit ise göster diğerlerini gizle.
+        var i = 0
+        while i < 12 {
+            if(imageIndex == i){
+                imageList[i].isHidden = false
+               
+            }else{
+                   imageList[i].isHidden = true
+            }
+            i = i + 1
+        }
         
-        let imageIndex = Int.random(in: 0..<12)
-        var imageIndexControl = imageIndex
-        imageList[imageIndex].isHidden = false
     }
+    
+    
+  
+    
+    
+    
+    
+    
     
 
 }
