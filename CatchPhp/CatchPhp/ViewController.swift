@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var lb_point: UILabel!
     @IBOutlet weak var lb_message: UILabel!
     
+    var repeatsControl : Bool = false
+    var pointValues = 0;
     
    
     @IBOutlet weak var img_12: UIImageView!
@@ -31,46 +33,121 @@ class ViewController: UIViewController {
     
     
     var imageList: [UIImageView] = []
-    var imageIndexControlFirst:Int = 0
+    
    
     override func viewDidLoad() {
         super.viewDidLoad()
+            
+            let images1Gesture = UITapGestureRecognizer(target: self, action: #selector(imageTapped(gesture:)))
+            let images2Gesture = UITapGestureRecognizer(target: self, action: #selector(imageTapped(gesture:)))
+            let images3Gesture = UITapGestureRecognizer(target: self, action: #selector(imageTapped(gesture:)))
+            let images4Gesture = UITapGestureRecognizer(target: self, action: #selector(imageTapped(gesture:)))
+            let images5Gesture = UITapGestureRecognizer(target: self, action: #selector(imageTapped(gesture:)))
+            let images6Gesture = UITapGestureRecognizer(target: self, action: #selector(imageTapped(gesture:)))
+            let images7Gesture = UITapGestureRecognizer(target: self, action: #selector(imageTapped(gesture:)))
+            let images8Gesture = UITapGestureRecognizer(target: self, action: #selector(imageTapped(gesture:)))
+            let images9Gesture = UITapGestureRecognizer(target: self, action: #selector(imageTapped(gesture:)))
+            let images10Gesture = UITapGestureRecognizer(target: self, action: #selector(imageTapped(gesture:)))
+            let images11Gesture = UITapGestureRecognizer(target: self, action: #selector(imageTapped(gesture:)))
+            let images12Gesture = UITapGestureRecognizer(target: self, action: #selector(imageTapped(gesture:)))
+          
         
+        
+        
+        // Tüm koordinatlarda bulunan imageların gizlenmesi.
         img_1.isHidden = true
+        img_1.isUserInteractionEnabled = true
         img_2.isHidden = true
+        img_2.isUserInteractionEnabled = true
         img_3.isHidden = true
+        img_3.isUserInteractionEnabled = true
         img_4.isHidden = true
+        img_4.isUserInteractionEnabled = true
         img_5.isHidden = true
+        img_5.isUserInteractionEnabled = true
         img_6.isHidden = true
+        img_6.isUserInteractionEnabled = true
         img_7.isHidden = true
+        img_7.isUserInteractionEnabled = true
         img_8.isHidden = true
+        img_8.isUserInteractionEnabled = true
         img_9.isHidden = true
+        img_9.isUserInteractionEnabled = true
         img_10.isHidden = true
+        img_10.isUserInteractionEnabled = true
         img_11.isHidden = true
+        img_11.isUserInteractionEnabled = true
         img_12.isHidden = true
+        img_12.isUserInteractionEnabled = true
         
+        img_1.addGestureRecognizer(images1Gesture)
+        img_2.addGestureRecognizer(images2Gesture)
+        img_3.addGestureRecognizer(images3Gesture)
+        img_4.addGestureRecognizer(images4Gesture)
+        img_5.addGestureRecognizer(images5Gesture)
+        img_6.addGestureRecognizer(images6Gesture)
+        img_7.addGestureRecognizer(images7Gesture)
+        img_8.addGestureRecognizer(images8Gesture)
+        img_9.addGestureRecognizer(images9Gesture)
+        img_10.addGestureRecognizer(images10Gesture)
+        img_11.addGestureRecognizer(images11Gesture)
+        img_12.addGestureRecognizer(images12Gesture)
+        
+        // Tüm imageların listesi.
         imageList = [img_1,img_2,img_3,img_4,img_5,img_6,img_7,img_8,img_9,img_10,img_11,img_12]
-
+            
+        
+    }
+    
+    
+    @objc func imageTapped(gesture:UITapGestureRecognizer){
+        
+        pointValues = pointValues + 1
+        lb_point.text = "\(pointValues)"
+        
+    }
+    
+    
+    // reset butonuna tıklandığında çalışacak metod.
+    
+    @IBAction func btn_reset(_ sender: Any) {
+        // tekrar kontrolü
+        repeatsControl = false
+        lb_time.text = "0"
+        lb_point.text = "0"
+        lb_message.text = ""
+        pointValues = 0
         
     }
     
     
     
+    
+    
+    // btn_start tıklanması sonucu oyunun başlaması.
     @IBAction func btn_start(_ sender: Any) {
         
-        _ = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(randomImageVisible), userInfo: nil, repeats: true)
-        
+         
+        // her 1 saniye de yeni bir image ın gösterilmesi.
+        _ = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(randomImageVisible), userInfo: nil, repeats: repeatsControl)
+       
       
         
         
     }
     
+    
+    
+    
+    // rastgele image ın gösterilmesi.
     @objc func randomImageVisible(){
             
+        // rastgele index numarası 0 - 12
         let imageIndex = Int.random(in: 0..<12) // 0
-        imageIndexControlFirst = imageIndex // 0
+       
+       
         // döngüye alıp gelen index dışında kileri gizleyeceğiz.
-        // eğer gelen index değeri, dizide bulunan index e eşit ise göster diğerlerini gizle.
+        // eğer gelen index değeri, dizide bulunan index e eşit ise göster, diğerlerini gizle.
         var i = 0
         while i < 12 {
             if(imageIndex == i){
