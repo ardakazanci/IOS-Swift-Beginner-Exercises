@@ -14,9 +14,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var lb_point: UILabel!
     @IBOutlet weak var lb_message: UILabel!
     
-    var repeatsControl : Bool = false
+
     var pointValues = 0;
-    
+    var timer:Timer?
+    var timerCountDown:Timer?
+    var countDown = 5
    
     @IBOutlet weak var img_12: UIImageView!
     @IBOutlet weak var img_11: UIImageView!
@@ -38,6 +40,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
             
+        lb_message.text = " "
+        lb_point.text =  "0"
+        lb_time.text = "60"
+        
+        
             let images1Gesture = UITapGestureRecognizer(target: self, action: #selector(imageTapped(gesture:)))
             let images2Gesture = UITapGestureRecognizer(target: self, action: #selector(imageTapped(gesture:)))
             let images3Gesture = UITapGestureRecognizer(target: self, action: #selector(imageTapped(gesture:)))
@@ -99,12 +106,62 @@ class ViewController: UIViewController {
         
     }
     
+    @objc func timerFinished(){
+        
+        countDown -= 1
+        lb_time.text = " : \(countDown)"
+        
+        if(countDown <= 0){
+                
+            lb_point.text = "Point : \(pointValues)"
+            lb_message.text = "Finish Game"
+            
+            timerCountDown?.invalidate()
+            timerCountDown = nil
+            timer?.invalidate()
+            timer = nil
+            
+            
+            img_1.isHidden = true
+  
+            img_2.isHidden = true
+           
+            img_3.isHidden = true
+           
+            img_4.isHidden = true
+           
+            img_5.isHidden = true
+           
+            img_6.isHidden = true
+            
+            img_7.isHidden = true
+            
+            img_8.isHidden = true
+            
+            img_9.isHidden = true
+           
+            img_10.isHidden = true
+           
+            img_11.isHidden = true
+           
+            img_12.isHidden = true
+           
+            
+            
+            
+            
+            
+        }
+        
+    }
+    
     
     @objc func imageTapped(gesture:UITapGestureRecognizer){
         
         pointValues = pointValues + 1
         lb_point.text = "\(pointValues)"
         
+      
     }
     
     
@@ -112,11 +169,18 @@ class ViewController: UIViewController {
     
     @IBAction func btn_reset(_ sender: Any) {
         // tekrar kontrolü
-        repeatsControl = false
         lb_time.text = "0"
         lb_point.text = "0"
         lb_message.text = ""
-        pointValues = 0
+        countDown = 0
+             pointValues = 0
+                   timerCountDown?.invalidate()
+                   timerCountDown = nil
+                   timer?.invalidate()
+                   timer = nil
+        
+        
+        
         
     }
     
@@ -127,9 +191,12 @@ class ViewController: UIViewController {
     // btn_start tıklanması sonucu oyunun başlaması.
     @IBAction func btn_start(_ sender: Any) {
         
+        countDown = 60
+        
+        timerCountDown = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerFinished), userInfo: nil, repeats: true)
          
         // her 1 saniye de yeni bir image ın gösterilmesi.
-        _ = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(randomImageVisible), userInfo: nil, repeats: repeatsControl)
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(randomImageVisible), userInfo: nil, repeats: true)
        
       
         
