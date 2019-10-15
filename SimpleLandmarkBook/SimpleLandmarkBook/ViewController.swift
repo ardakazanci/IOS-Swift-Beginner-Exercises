@@ -24,6 +24,28 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         // Aşağıda ki 2 fonksiyonun çalışması için gerekmektedir.
         tableView.delegate = self
         tableView.dataSource = self
+        
+        // Names List.
+        var landmarkNames = [String]()
+         landmarkNames.append("Akropolis")
+         landmarkNames.append("Angkor")
+         landmarkNames.append("Çin Seddi")
+         landmarkNames.append("Giza Pramitleri")
+         landmarkNames.append("Kolezyum")
+         landmarkNames.append("Macchu Picchu")
+         landmarkNames.append("Teotihuacan")
+        
+        // Images List.
+        var landmarksImages = [UIImage]()
+         landmarksImages.append(UIImage(named: "akropolis")!)
+         landmarksImages.append(UIImage(named: "angkor")!)
+         landmarksImages.append(UIImage(named: "cin_seddi")!)
+         landmarksImages.append(UIImage(named: "giza_pramitleri")!)
+         landmarksImages.append(UIImage(named: "kolezyum")!)
+         landmarksImages.append(UIImage(named: "machu_piccu")!)
+         landmarksImages.append(UIImage(named: "Teotihuacan")!)
+        
+        
     }
     
     
