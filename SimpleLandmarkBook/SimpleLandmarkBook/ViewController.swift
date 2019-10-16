@@ -46,6 +46,9 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
          landmarksImages.append(UIImage(named: "machu_piccu")!)
          landmarksImages.append(UIImage(named: "Teotihuacan")!)
         
+        // Navigasyon başlığı atayabiliyoruz
+        navigationItem.title = "Landmark Book"
+        
         
     }
     
