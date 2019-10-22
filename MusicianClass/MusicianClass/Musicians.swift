@@ -49,6 +49,10 @@ class Musicians {
         
     }
     
+    func sing(){
+        print("Nothing else matters")
+    }
+    
     
     
     
