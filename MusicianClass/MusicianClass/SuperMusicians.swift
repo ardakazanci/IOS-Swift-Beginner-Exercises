@@ -10,11 +10,22 @@ import Foundation
 
 class SuperMusicians: Musicians {
     
+    // Access Levels - ERİŞİM SEVİYELERİ
+    /*
+     private : Sınıf içi
+     filePrivate : Dosya içi
+     internal : Default değer.
+     public
+     open
+     */
     
-    // Super ile super sınıftan metoda işarette bulunduk.
+    
+    
+    
+    // super. ile super sınıftan bir metoda işarette bulunduk.
     // Musicians sınıfından kalıtım sağladık.
     // SubClass : SuperMusicians SuperClass : Musicians
-    // SuperClass'ta ki metot ve propertlere ulaşabiliriz. 
+    // SuperClass'ta ki metot ve propertlere ulaşabiliriz.
     override func sing() {
         super.sing()
         print("Other song")
