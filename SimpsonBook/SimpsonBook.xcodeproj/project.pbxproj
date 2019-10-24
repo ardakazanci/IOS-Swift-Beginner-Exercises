@@ -14,6 +14,11 @@
 		A58348392360C27D00962842 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A58348382360C27D00962842 /* Assets.xcassets */; };
 		A583483C2360C27D00962842 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A583483A2360C27D00962842 /* LaunchScreen.storyboard */; };
 		A58348442360C53D00962842 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58348432360C53D00962842 /* DetailsViewController.swift */; };
+		A583484923621AB200962842 /* lisa.png in Resources */ = {isa = PBXBuildFile; fileRef = A583484523621AB200962842 /* lisa.png */; };
+		A583484A23621AB200962842 /* bart.png in Resources */ = {isa = PBXBuildFile; fileRef = A583484623621AB200962842 /* bart.png */; };
+		A583484B23621AB200962842 /* marge.png in Resources */ = {isa = PBXBuildFile; fileRef = A583484723621AB200962842 /* marge.png */; };
+		A583484C23621AB200962842 /* homer.png in Resources */ = {isa = PBXBuildFile; fileRef = A583484823621AB200962842 /* homer.png */; };
+		A583484E23621B1000962842 /* Simpsons.swift in Sources */ = {isa = PBXBuildFile; fileRef = A583484D23621B1000962842 /* Simpsons.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		A583483B2360C27D00962842 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A583483D2360C27D00962842 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A58348432360C53D00962842 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		A583484523621AB200962842 /* lisa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lisa.png; path = ../../../../../Downloads/Images/lisa.png; sourceTree = "<group>"; };
+		A583484623621AB200962842 /* bart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bart.png; path = ../../../../../Downloads/Images/bart.png; sourceTree = "<group>"; };
+		A583484723621AB200962842 /* marge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = marge.png; path = ../../../../../Downloads/Images/marge.png; sourceTree = "<group>"; };
+		A583484823621AB200962842 /* homer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = homer.png; path = ../../../../../Downloads/Images/homer.png; sourceTree = "<group>"; };
+		A583484D23621B1000962842 /* Simpsons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simpsons.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,9 +73,14 @@
 				A58348332360C27B00962842 /* ViewController.swift */,
 				A58348352360C27B00962842 /* Main.storyboard */,
 				A58348382360C27D00962842 /* Assets.xcassets */,
+				A583484623621AB200962842 /* bart.png */,
+				A583484823621AB200962842 /* homer.png */,
+				A583484523621AB200962842 /* lisa.png */,
+				A583484723621AB200962842 /* marge.png */,
 				A583483A2360C27D00962842 /* LaunchScreen.storyboard */,
 				A583483D2360C27D00962842 /* Info.plist */,
 				A58348432360C53D00962842 /* DetailsViewController.swift */,
+				A583484D23621B1000962842 /* Simpsons.swift */,
 			);
 			path = SimpsonBook;
 			sourceTree = "<group>";
@@ -128,9 +143,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A583484B23621AB200962842 /* marge.png in Resources */,
+				A583484923621AB200962842 /* lisa.png in Resources */,
+				A583484A23621AB200962842 /* bart.png in Resources */,
 				A583483C2360C27D00962842 /* LaunchScreen.storyboard in Resources */,
 				A58348392360C27D00962842 /* Assets.xcassets in Resources */,
 				A58348372360C27B00962842 /* Main.storyboard in Resources */,
+				A583484C23621AB200962842 /* homer.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +164,7 @@
 				A58348302360C27B00962842 /* AppDelegate.swift in Sources */,
 				A58348322360C27B00962842 /* SceneDelegate.swift in Sources */,
 				A58348442360C53D00962842 /* DetailsViewController.swift in Sources */,
+				A583484E23621B1000962842 /* Simpsons.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
