@@ -16,10 +16,16 @@ class DetailsViewController: UIViewController {
     
     @IBOutlet weak var detailsJob: UILabel!
     
+    var selectionSimpsons : Simpsons?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+       
+        detailsName.text = selectionSimpsons?.name
+        detailsJob.text = selectionSimpsons?.job
+        detailsImageView.image = selectionSimpsons?.image
+        
     }
     
 

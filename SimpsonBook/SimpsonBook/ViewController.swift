@@ -10,11 +10,10 @@ import UIKit
 
 class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSource{
     
-    
-   
-    
-
     @IBOutlet weak var mainTableView: UITableView!
+    
+    var homeArray = [Simpsons]()
+    var choosenSimpson : Simpsons?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,22 +22,25 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
         mainTableView.dataSource = self
         mainTableView.delegate = self
         
-               let homer = Simpsons(simpsonName: "Homer", simpsonJob: "Nuclear Safety", simpsonImage: UIImage(named: "homer")!)
+        let homer = Simpsons(simpsonName: "Homer", simpsonJob: "Nuclear Safety", simpsonImage: UIImage(named: "homer")!)
         
-               let marge = Simpsons(simpsonName: "Marge", simpsonJob: "HouseWife", simpsonImage: UIImage(named: "marge")!)
+        let marge = Simpsons(simpsonName: "Marge", simpsonJob: "HouseWife", simpsonImage: UIImage(named: "marge")!)
         
-               let bart = Simpsons(simpsonName: "Bart", simpsonJob: "Student", simpsonImage: UIImage(named: "bart")!)
-                
-               let lisa = Simpsons(simpsonName: "Lisa", simpsonJob: "Student", simpsonImage: UIImage(named: "lisa")!)
+        let bart = Simpsons(simpsonName: "Bart", simpsonJob: "Student", simpsonImage: UIImage(named: "bart")!)
         
-        let homerArray = [homer,marge,bart,lisa]
+        let lisa = Simpsons(simpsonName: "Lisa", simpsonJob: "Student", simpsonImage: UIImage(named: "lisa")!)
+        
+        homeArray.append(homer)
+        homeArray.append(marge)
+        homeArray.append(bart)
+        homeArray.append(lisa)
         
     }
     
     
     // Kaç tane row olacak
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-           return 10
+        return homeArray.count
     }
     
     
@@ -47,12 +49,31 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = UITableViewCell() // Hücre görünümü.
-        cell.textLabel?.text = "Sample Simpsons"
+        cell.textLabel?.text = homeArray[indexPath.row].name
         return cell
         
         
     }
-
-
+    
+    // Tıklanan seçime göre yapılacak işlemler.
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        // Seçilen Simpsons değerini alıyoruz.
+        choosenSimpson = homeArray[indexPath.row]
+        
+        self.performSegue(withIdentifier:"toDetailsVC", sender: nil)
+    }
+    
+    // Segue olmadan çalışacak metod.
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetailsVC"{
+            let gidilecekVC = segue.destination as! DetailsViewController
+            gidilecekVC.selectionSimpsons = choosenSimpson
+        }
+    }
+    
+    
+    
+    
 }
 
